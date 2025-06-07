@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bienvenido</title></head>
+<body>
+     <h1>Conectados con la vida</h1>
+<h2>Seminario de ESI - 4° año IES 6021</h2>
+
+<style>
+    /* Reset básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", Roboto, sans-serif;
+        background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+        color: #111827;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    /* === Títulos === */
+    h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #10b981, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: normal;
+        color: #4b5563;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* === Formulario === */
+    form {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        padding: 0.8rem;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.8rem 1.5rem;
+        background-color: #10b981;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #059669;
+    }
+
+    /* === Emojis === */
+    .emojis {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .emojis form {
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .emoji-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .emoji-button img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .emoji-button:hover {
+        transform: scale(1.1);
+    }
+
+    /* === Página de agradecimiento === */
+    .gracias {
+        margin-top: 4rem;
+        font-size: 1.5rem;
+        color: #374151;
+        text-align: center;
+    }
+
+    /* === Panel administrativo === */
+    .admin-container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .chart {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+        .emoji-button img {
+            width: 80px;
+            height: 80px;
+        }
+
+        form {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+    <h2>¿Cómo te llamás hoy?</h2>
+    <form action="/submit-nick" method="POST">
+        <input type="text" name="nick" required placeholder="Tu nombre o apodo">
+        <button type="submit">Aceptar</button>
+    </form>
+</body>
+</html>
