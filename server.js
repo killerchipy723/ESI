@@ -59,6 +59,6 @@ io.on('connection', socket => {
     socket.emit('update', votos);
 });
 
-http.listen(1500, () => {
+http.listen(2100, '0.0.0.0',() => {
     console.log('Servidor corriendo en http://localhost:3000');
 });

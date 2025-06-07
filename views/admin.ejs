@@ -148,6 +148,76 @@
         width: 100%;
         margin-top: 2rem;
     }
+    .estadisticas-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.estadisticas-container h3 {
+  font-size: 1.8rem;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+#estadisticas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.emoji-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.emoji-box:hover {
+  transform: scale(1.05);
+}
+
+.emoji-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.emoji-box span {
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 0.2rem;
+}
+
+.emoji-box strong {
+  font-size: 1.4rem;
+  color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .emoji-box {
+    width: 100px;
+  }
+
+  .emoji-box img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 
     /* === Responsive === */
     @media (max-width: 600px) {
@@ -161,16 +231,33 @@
         }
     }
 </style>
+
 <body>
     <h1>Conectados con la vida</h1>
 <h2>Seminario de ESI - 4° año IES 6021</h2>
 
-    <h2>Estado emocional de los alumnos</h2>
-    <ul id="estadisticas">
-        <li>😊 Feliz: <span id="feliz"><%= votos.feliz %></span></li>
-        <li>😐 Bien: <span id="bien"><%= votos.bien %></span></li>
-        <li>😢 Triste: <span id="triste"><%= votos.triste %></span></li>
-    </ul>
+   
+    <div class="estadisticas-container">
+  <h3>Estado de ánimo de los alumnos</h3>
+  <ul id="estadisticas">
+    <li class="emoji-box feliz">
+      <img src="/img/feliz.png" alt="Feliz">
+      <span>Feliz</span>
+      <strong id="feliz"><%= votos.feliz %></strong>
+    </li>
+    <li class="emoji-box bien">
+      <img src="/img/bien.png" alt="Bien">
+      <span>Bien</span>
+      <strong id="bien"><%= votos.bien %></strong>
+    </li>
+    <li class="emoji-box triste">
+      <img src="/img/triste.png" alt="Triste">
+      <span>Triste</span>
+      <strong id="triste"><%= votos.triste %></strong>
+    </li>
+  </ul>
+</div>
+
 
     <script>
         const socket = io();
@@ -180,5 +267,6 @@
             document.getElementById('triste').textContent = data.triste;
         });
     </script>
+    
 </body>
 </html>
