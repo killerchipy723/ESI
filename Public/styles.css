@@ -1,133 +1,15 @@
-/* Reset básico y fuente elegante */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Segoe UI", Roboto, sans-serif;
-    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
-    color: #111827;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* Títulos */
-h1 {
-    font-size: 2.5rem;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
 h2 {
-    font-size: 1.3rem;
-    font-weight: normal;
-    color: #4b5563;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2563eb; /* un azul intenso elegante */
     text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 3px rgba(37, 99, 235, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
 }
 
-/* Formulario */
-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-}
-
-input[type="text"] {
-    width: 90%;
-    padding: 0.8rem;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-button {
-    padding: 0.8rem 1.5rem;
-    background-color: #10b981;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #059669;
-}
-
-/* Emojis */
-.emojis {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.emojis form {
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-}
-
-.emoji-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.emoji-button img {
-    width: 100px;
-    height: 100px;
-}
-
-.emoji-button:hover {
-    transform: scale(1.1);
-}
-
-/* Gracias */
-.gracias {
-    margin-top: 4rem;
-    font-size: 1.5rem;
-    color: #374151;
-}
-
-/* Admin */
-.admin-container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.chart {
-    width: 100%;
-    margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .emoji-button img {
-        width: 80px;
-        height: 80px;
-    }
-
-    form {
-        padding: 1.5rem;
-    }
+h2:hover {
+    color: #1e40af; /* azul más oscuro al pasar el cursor */
 }
