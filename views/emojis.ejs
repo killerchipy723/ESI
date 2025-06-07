@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        h2 {
+        .subtittle {
     font-size: 2rem;
     font-weight: 600;
     color: #2563eb; /* un azul intenso elegante */
@@ -23,7 +23,7 @@
     transition: color 0.3s ease;
 }
 
-h2:hover {
+.subtittle:hover {
     color: #1e40af; /* azul más oscuro al pasar el cursor */
 }
 
@@ -198,7 +198,7 @@ h2:hover {
     <h1>Conectados con la vida</h1>
     <h2>Seminario de ESI - 4° año IES 6021</h2>
 
-    <h2>Hola <%= nick %>, ¿cómo te sentís Hoy?</h2>
+    <h2 class="subtittle">Hola <%= nick %>, ¿cómo te sentís Hoy?</h2>
     <form action="/votar" method="POST">
         <input type="hidden" name="nick" value="<%= nick %>">
         <button type="submit" name="emocion" value="feliz" class="feliz" aria-label="Feliz">😊</button>
